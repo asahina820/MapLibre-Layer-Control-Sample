@@ -13,3 +13,5 @@ map.setLayoutProperty(unSelectedMap, 'visibility', 'none');
 ```
 map.setLayoutProperty(selectedMap, 'visibility', 'visible');
 ```
+
+![Animation](https://github.com/asahina820/MapLibre-Layer-Control-Sample/assets/83101503/64bcc703-a660-400c-b326-3c886f2420b8)
