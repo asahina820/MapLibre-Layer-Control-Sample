@@ -8,7 +8,7 @@ const map = new maplibregl.Map({
     // データソース
     sources: {
       // 地理院地図淡色地図
-      'gsi-tile': {
+      pale: {
         // ソースの種類。vector、raster、raster-dem、geojson、image、video のいずれか
         type: 'raster',
         // タイルソースのURL 今回は地理院の淡色地図タイル
@@ -19,7 +19,7 @@ const map = new maplibregl.Map({
         attribution: "地図の出典：<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>国土地理院</a>",
       },
       // 地理院地図航空写真
-      'gsi-photo': {
+      photo: {
         type: 'raster',
         tiles: ['https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg'],
         tileSize: 256,
@@ -30,16 +30,16 @@ const map = new maplibregl.Map({
     layers: [
       {
         // 一意のレイヤID
-        id: 'gsi-layer',
+        id: 'pale-layer',
         // レイヤの種類。background、fill、line、symbol、raster、circle、fill-extrusion、heatmap、hillshade のいずれか
         type: 'raster',
         // データソースの指定
-        source: 'gsi-tile',
+        source: 'pale',
       },
       {
         id: 'photo-layer',
         type: 'raster',
-        source: 'gsi-photo',
+        source: 'photo',
         layout: {
           visibility: 'none',
         },
