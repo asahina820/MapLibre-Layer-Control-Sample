@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>表示/非表示切り替え</title>
+    <meta name="description" content="sample" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- MapLibre GL JS -->
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" />
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+  </head>
+  <body>
+    <span>背景地図: </span>
+    <select name="layer-control" onChange="changeMap(this.value)">
+      <option value="pale-layer">淡色地図</option>
+      <option value="photo-layer">写真</option>
+    </select>
+    <div id="map"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
