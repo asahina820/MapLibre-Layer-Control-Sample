@@ -10,12 +10,14 @@
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
   </head>
   <body>
-    <span>背景地図: </span>
-    <select name="layer-control" onChange="changeMap(this.value)">
-      <option value="pale-layer">淡色地図</option>
-      <option value="photo-layer">写真</option>
-    </select>
     <div id="map"></div>
+    <div id="layerControl">
+      <span>背景地図: </span>
+      <select name="layer-control" onChange="changeMap(this.value)">
+        <option value="pale-layer">淡色地図</option>
+        <option value="photo-layer">写真</option>
+      </select>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
